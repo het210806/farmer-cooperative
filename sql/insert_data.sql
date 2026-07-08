@@ -1,5 +1,5 @@
 -- FARMER
-INSERT INTO FARMER (FarmerID, AadhaarNo, Name, Phone, Village, Status) VALUES
+INSERT INTO farmer (farmerid,aadhaarno,name,phone,village,status) VALUES
 (1,  '123456789012', 'Ramesh Patel',   '9900001111', 'Karamsad',   'Active'),
 (2,  '234567890123', 'Suresh Desai',   '9900002222', 'Anklav',     'Active'),
 (3,  '345678901234', 'Geeta Sharma',   '9900003333', 'Borsad',     'Active'),
@@ -9,20 +9,20 @@ INSERT INTO FARMER (FarmerID, AadhaarNo, Name, Phone, Village, Status) VALUES
 (7,  '789012345678', 'Anita Yadav',    '9900007777', 'Tarapur',    'Active'),
 (8,  '890123456789', 'Vijay Kumar',    '9900008888', 'Padra',      'Active');
 
--- COOPERATIVE SOCIETIE
-INSERT INTO COOPERATIVE_SOCIETY (CoopID, Name, RegNo, District, State, Phone) VALUES
+-- COOPERATIVE SOCIETY
+INSERT INTO cooperative_society (coopid,name,regno,district,state,phone) VALUES
 (1, 'Amul Farmers Cooperative', 'GJ-COOP-001', 'Anand',       'Gujarat', '9876500001'),
 (2, 'Krishna Agri Cooperative',  'GJ-COOP-002', 'Vadodara',    'Gujarat', '9876500002'),
 (3, 'Narmada Kisan Society',      'MP-COOP-001', 'Narmadapuram','Madhya Pradesh','9876500003');
 
 -- LOGISTIC PARTNER
-INSERT INTO LOGISTICS_PARTNER (PartnerID, Name, ServiceRegion, GSTIN, Phone) VALUES
+INSERT INTO logistics_partner (partnerid,name,serviceregion,gstin,phone) VALUES
 (1, 'Swift Agri Logistics',  'Gujarat',              '24AABCS1429B1Z5', '9811100001'),
 (2, 'Central India Freight', 'Madhya Pradesh',       '23AACCC1234D1Z9', '9811100002'),
 (3, 'Pan India Carriers',    'Gujarat, Maharashtra', '27AADCP5678E1Z3', '9811100003');
 
 -- BUYER
-INSERT INTO BUYER (BuyerID, BizName, Type, Email, GSTIN) VALUES
+INSERT INTO buyer (buyerid,bizname,type,email,gstin) VALUES
 (1, 'National Food Corp',      'Government', 'nfc@gov.in',          '07AAACN1234A1Z6'),
 (2, 'AgroMart Pvt Ltd',        'Private',    'buy@agromart.com',    '19AABCA5678B2Z1'),
 (3, 'Gujarat Mills Ltd',       'Industry',   'proc@gujaratmills.in','24AADCG9012C3Z4'),
@@ -30,7 +30,7 @@ INSERT INTO BUYER (BuyerID, BizName, Type, Email, GSTIN) VALUES
 (5, 'State Procurement Board', 'Government', 'spb@state.gov.in',    '24AABCS2345E5Z2');
 
 -- SUBSIDY SCHEME
-INSERT INTO SUBSIDY_SCHEME (SchemeID, SchemeName, Type, StartDate, EligibleCrop) VALUES
+INSERT INTO subsidy_scheme (schemeid,schemename,type,startdate,eligiblecrop) VALUES
 (1, 'PM Fasal Bima Yojana',       'Insurance',       '2022-04-01', 'All'),
 (2, 'MSP Bonus Scheme 2024',      'Price Support',   '2024-04-01', 'Wheat'),
 (3, 'Kharif Input Subsidy',       'Input Support',   '2024-06-01', 'Rice'),
@@ -38,7 +38,7 @@ INSERT INTO SUBSIDY_SCHEME (SchemeID, SchemeName, Type, StartDate, EligibleCrop)
 (5, 'Soybean Cultivation Scheme', 'Cultivation Aid', '2024-07-01', 'Soybean');
 
 -- FARMER MEMBERSHIP
-INSERT INTO FARMER_MEMBERSHIP (MemberID, FarmerID, CoopID, EnrollDate, MemberFee, Status) VALUES
+INSERT INTO farmer_MEMBERSHIP (memberid,farmerid,coopid,enrolldate,memberfee,status) VALUES
 (1, 1, 1, '2022-04-01', 500.00,  'Active'),
 (2, 2, 1, '2022-04-15', 500.00,  'Active'),
 (3, 3, 1, '2022-05-01', 500.00,  'Active'),
@@ -49,7 +49,7 @@ INSERT INTO FARMER_MEMBERSHIP (MemberID, FarmerID, CoopID, EnrollDate, MemberFee
 (8, 8, 3, '2023-03-15', 450.00,  'Active');
 
 -- CROP LOT
-INSERT INTO CROP_LOT (LotID, FarmerID, CropName, Variety, QtyKg, HarvestDate, Season) VALUES
+INSERT INTO crop_lot (lotid,farmerid,cropname,variety,qtykg,harvestdate,season) VALUES
 (1,  1, 'Wheat',   'Lok-1',     5000.00, '2024-03-10', 'Rabi'),
 (2,  2, 'Rice',    'Basmati',   3000.00, '2024-10-15', 'Kharif'),
 (3,  3, 'Cotton',  'BT Hybrid', 2000.00, '2024-11-01', 'Kharif'),
@@ -62,14 +62,14 @@ INSERT INTO CROP_LOT (LotID, FarmerID, CropName, Variety, QtyKg, HarvestDate, Se
 (10, 3, 'Cotton',  'Bunny BT',  1800.00, '2024-11-10', 'Kharif');
 
 -- WAREHOUSE
-INSERT INTO WAREHOUSE (WarehouseID, CoopID, Location, CapacityKg, Address) VALUES
+INSERT INTO warehouse (warehouseid,coopid,location,capacitykg,address) VALUES
 (1, 1, 'Anand Central',   500000.00, 'Plot 12, GIDC, Anand, Gujarat'),
 (2, 1, 'Anand East',      300000.00, 'Survey 45, Karamsad Rd, Anand'),
 (3, 2, 'Vadodara Main',   400000.00, 'NH-48, Makarpura, Vadodara'),
 (4, 3, 'Narmadapuram WH', 250000.00, 'Hoshangabad Rd, Narmadapuram, MP');
 
 -- VEHICLE
-INSERT INTO VEHICLE (VehicleID, PartnerID, VehicleType, CapacityKg, RegNo) VALUES
+INSERT INTO vehicle (vehicleid,partnerid,vehicletype,capacitykg,regno) VALUES
 (1, 1, 'Mini Truck',  5000.00,  'GJ-01-AB-1234'),
 (2, 1, 'Large Truck', 15000.00, 'GJ-01-CD-5678'),
 (3, 2, 'Large Truck', 12000.00, 'MP-09-EF-9012'),
@@ -77,7 +77,7 @@ INSERT INTO VEHICLE (VehicleID, PartnerID, VehicleType, CapacityKg, RegNo) VALUE
 (5, 1, 'Mini Truck',  5000.00,  'GJ-01-IJ-7890');
 
 -- CROP PRICE
-INSERT INTO CROP_PRICE (PriceID, CoopID, CropName, Grade, PricePerKg, EffectiveDate, SettleAdmin) VALUES
+INSERT INTO crop_price (priceid,coopid,cropname,grade,priceperkg,effectivedate,settleadmin) VALUES
 (1,  1, 'Wheat',   'A', 23.00, '2024-03-01', 'Ajay Bhatt'),
 (2,  1, 'Wheat',   'B', 21.00, '2024-03-01', 'Ajay Bhatt'),
 (3,  1, 'Rice',    'A', 47.00, '2024-10-01', 'Kavita Rao'),
@@ -90,7 +90,7 @@ INSERT INTO CROP_PRICE (PriceID, CoopID, CropName, Grade, PricePerKg, EffectiveD
 (10, 1, 'Wheat',   'A', 24.00, '2025-03-01', 'Ajay Bhatt');
 
 -- PROCUREMENT
-INSERT INTO PROCUREMENT (ProcureID, LotID, CoopID, ProcureDate, QtyKg, PricePerKg, TotalAmt) VALUES
+INSERT INTO procurement (procureid,lotid,coopid,procuredate,qtykg,priceperkg,totalamt) VALUES
 (1,  1,  1, '2024-03-12', 5000.00, 22.50, 112500.00),
 (2,  2,  1, '2024-10-17', 3000.00, 45.00, 135000.00),
 (3,  3,  2, '2024-11-03', 2000.00, 60.00, 120000.00),
@@ -103,7 +103,7 @@ INSERT INTO PROCUREMENT (ProcureID, LotID, CoopID, ProcureDate, QtyKg, PricePerK
 (10, 10, 2, '2024-11-12', 1800.00, 58.00, 104400.00);
 
 -- QUALITY CHECK
-INSERT INTO QUALITY_CHECK (QCID, LotID, Grade, MoisturePct, Inspector, QCDate) VALUES
+INSERT INTO quality_check (qcid,lotid,grade,moisturepct,inspector,qcdate) VALUES
 (1,  1,  'A',  12.50, 'Dinesh Shah',    '2024-03-11'),
 (2,  2,  'B',  14.00, 'Rekha Mehta',    '2024-10-16'),
 (3,  3,  'A',  10.80, 'Dinesh Shah',    '2024-11-02'),
@@ -116,7 +116,7 @@ INSERT INTO QUALITY_CHECK (QCID, LotID, Grade, MoisturePct, Inspector, QCDate) V
 (10, 10, 'A',  10.50, 'Dinesh Shah',    '2024-11-11');
 
 -- FARMER PAYMENT
-INSERT INTO FARMER_PAYMENT (PaymentID, ProcureID, FarmerID, GrossAmt, Deductions, NetPayable, PayDate, Mode) VALUES
+INSERT INTO farmer_PAYMENT (paymentid,procureid,farmerid,grossamt,deductions,netpayable,paydate,mode) VALUES
 (1,  1,  1, 112500.00,  2500.00, 110000.00, '2024-03-14', 'NEFT'),
 (2,  2,  2, 135000.00,  3000.00, 132000.00, '2024-10-19', 'NEFT'),
 (3,  3,  3, 120000.00,  2000.00, 118000.00, '2024-11-05', 'Cheque'),
@@ -129,7 +129,7 @@ INSERT INTO FARMER_PAYMENT (PaymentID, ProcureID, FarmerID, GrossAmt, Deductions
 (10, 10, 3, 104400.00,  2100.00, 102300.00, '2024-11-14', 'Cheque');
 
 -- INVENTORY
-INSERT INTO INVENTORY (InventoryID, WarehouseID, ProcureID, CropName, Grade, QtyAvailKg, ReceivedDate, ShelfDate) VALUES
+INSERT INTO inventory (inventoryid,warehouseid,procureid,cropname,grade,qtyavailkg,receiveddate,shelfdate) VALUES
 (1,  1, 1,  'Wheat',   'A', 5000.00, '2024-03-13', '2024-09-13'),
 (2,  1, 2,  'Rice',    'B', 3000.00, '2024-10-18', '2025-04-18'),
 (3,  3, 3,  'Cotton',  'A', 2000.00, '2024-11-04', '2025-05-04'),
@@ -142,7 +142,7 @@ INSERT INTO INVENTORY (InventoryID, WarehouseID, ProcureID, CropName, Grade, Qty
 (10, 3, 10, 'Cotton',  'A', 1800.00, '2024-11-13', '2025-05-13');
 
 -- ORDER HEADER
-INSERT INTO ORDER_HEADER (OrderID, BuyerID, OrderDate, Status, DelivAddr, QtyOrdered) VALUES
+INSERT INTO order_header (orderid,buyerid,orderdate,status,delivaddr,qtyordered) VALUES
 (1, 1, '2024-04-01', 'Delivered',  'FCI Godown, Anand',           5000.00),
 (2, 2, '2024-11-01', 'Delivered',  'AgroMart WH, Surat',          3000.00),
 (3, 3, '2024-11-05', 'Processing', 'Gujarat Mills, Vadodara',     4500.00),
@@ -150,7 +150,7 @@ INSERT INTO ORDER_HEADER (OrderID, BuyerID, OrderDate, Status, DelivAddr, QtyOrd
 (5, 5, '2025-03-20', 'Confirmed',  'SPB Depot, Anand',            4000.00);
 
 -- ORDER ITEM
-INSERT INTO ORDER_ITEM (OrderItemID, OrderID, InventoryID, QtyKg, PricePerKg, TotalAmt) VALUES
+INSERT INTO order_item (orderitemid,orderid,inventoryid,qtykg,priceperkg,totalamt) VALUES
 (1, 1, 1, 5000.00, 25.00, 125000.00),
 (2, 2, 2, 3000.00, 50.00, 150000.00),
 (3, 3, 4, 4500.00, 20.00,  90000.00),
@@ -158,7 +158,7 @@ INSERT INTO ORDER_ITEM (OrderItemID, OrderID, InventoryID, QtyKg, PricePerKg, To
 (5, 5, 8, 4000.00, 26.00, 104000.00);
 
 -- TRANSPORT JOB
-INSERT INTO TRANSPORT_JOB (JobID, VehicleID, ProcureID, OrderID, SchedDate, SrcAddr, AmtPayable, Status) VALUES
+INSERT INTO transport_job (jobid,vehicleid,procureid,orderid,scheddate,srcaddr,amtpayable,status) VALUES
 (1, 1, 1, 1, '2024-03-14', 'Karamsad Farm, Anand',         4500.00,  'Completed'),
 (2, 2, 2, 2, '2024-10-18', 'Anklav Farm, Anand',           6000.00,  'Completed'),
 (3, 4, 3, 3, '2024-11-04', 'Borsad Farm, Anand',           8000.00,  'In Transit'),
@@ -166,7 +166,7 @@ INSERT INTO TRANSPORT_JOB (JobID, VehicleID, ProcureID, OrderID, SchedDate, SrcA
 (5, 2, 8, 5, '2025-03-11', 'Karamsad Farm, Anand',         5500.00,  'Scheduled');
 
 -- SUBSIDY DISBURSEMENT
-INSERT INTO SUBSIDY_DISBURSEMENT (DisburseID, SchemeID, FarmerID, ProcureID, AmtDisbursed, DisDate, RefNo, Status) VALUES
+INSERT INTO subsidy_disbursement (disburseid,schemeid,farmerid,procureid,amtdisbursed,disdate,refno,status) VALUES
 (1,  2, 1, 1,  5000.00, '2024-03-20', 'MSP-2024-001', 'Disbursed'),
 (2,  3, 2, 2,  4500.00, '2024-10-25', 'KIS-2024-002', 'Disbursed'),
 (3,  4, 3, 3,  6000.00, '2024-11-15', 'CEI-2024-003', 'Disbursed'),
